@@ -22,3 +22,31 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+/*  Gallery styles for task 3 */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  margin: auto;
+  width: 440px;
+  border-radius: 3px;
+
+  background-color: antiquewhite;
+}
+
+.gallery__item {
+  list-style-type: none;
+}
+
+.gallery__item + .gallery__item {
+  margin-top: 15px;
+}
+
+.gallery__img {
+  border-radius: 3px;
+  display: block;
+}
