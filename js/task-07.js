@@ -5,6 +5,8 @@ const ref = {
 
 ref.input.addEventListener("input", onInputFontSizeChange);
 
+ref.span.style.fontSize = `${ref.input.value}px`;
+
 function onInputFontSizeChange(event) {
   ref.span.style.fontSize = `${event.currentTarget.value}px`;
 }

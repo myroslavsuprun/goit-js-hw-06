@@ -11,13 +11,12 @@ function onSubmit(event) {
     event.currentTarget.password.value === ""
   ) {
     alert("All fields must be completed");
+  } else {
+    const element = {
+      email: event.currentTarget.email.value,
+      password: event.currentTarget.password.value,
+    };
+    console.log(element);
+    event.currentTarget.reset();
   }
-
-  const element = {
-    email: event.currentTarget.email.value,
-    password: event.currentTarget.password.value,
-  };
-  console.log(element);
-
-  event.currentTarget.reset();
 }

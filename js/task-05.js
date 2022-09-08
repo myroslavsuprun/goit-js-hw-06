@@ -4,15 +4,14 @@ const ref = {
 };
 
 ref.nameInput.addEventListener("input", onInputSpanChange);
+ref.nameInput.addEventListener("input", onEmptyInputSpanChange);
 
 function onInputSpanChange(event) {
   ref.nameSpan.textContent = event.currentTarget.value;
 }
 
-ref.nameInput.addEventListener("blur", onBlurEmptyChecker);
-
-function onBlurEmptyChecker(event) {
-  if ((event.currentTarget.value = " ")) {
+function onEmptyInputSpanChange(event) {
+  if (event.currentTarget.value === "") {
     ref.nameSpan.textContent = "Anonymous";
   }
 }

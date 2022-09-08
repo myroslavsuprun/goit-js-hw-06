@@ -1,9 +1,13 @@
 const inputArea = document.querySelector("input");
 
-inputArea.addEventListener("blur", onBlurQuantityChecker);
+inputArea.addEventListener("input", onBlurQuantityChecker);
 
 function onBlurQuantityChecker(event) {
-  if (event.currentTarget.value.length >= event.currentTarget.dataset.length) {
+  const ifEqual =
+    event.currentTarget.value.length ===
+    parseInt(event.currentTarget.dataset.length);
+
+  if (ifEqual) {
     event.currentTarget.classList.add("valid");
     event.currentTarget.classList.remove("invalid");
   } else {
